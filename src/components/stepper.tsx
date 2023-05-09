@@ -1,6 +1,6 @@
 export default function Stepper() {
   return (
-    <div className="px-72 w-full justify-around flex">
+    <div className="px-72 w-max-screen justify-around flex">
       <div className="flex justify-center items-center flex-col">
         <div className="h-9 w-9 rounded-full border border-blue">
           <span className="justify-center text-blue font-bold flex mt-1">

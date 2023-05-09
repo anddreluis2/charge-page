@@ -1,5 +1,8 @@
+"use client";
 import Card from "@/components/card";
 import Stepper from "@/components/stepper";
+import TabSlider from "@/components/tabSlider";
+import { Tab } from "@headlessui/react";
 
 export default function Home() {
   return (
@@ -7,7 +10,7 @@ export default function Home() {
       <Stepper />
       <div className="flex pt-7 px-7 justify-around">
         <div className="flex flex-col">
-          <h1 className="font-bold text-gray-800 pb-6">O que cobrar?</h1>
+          <h1 className="font-bold text-gray-800 pb-6">O QUE COBRAR?</h1>
           <div className="rounded-lg w-48 relative">
             <div className="bottom-0 left-0 absolute w-9 h-9 bg-blue rounded-lg flex items-center justify-center text-[#FFF] font-bold">
               R$
@@ -30,6 +33,14 @@ export default function Home() {
           </div>
         </div>
         <Card />
+      </div>
+      <div className="pt-7 px-72">
+        <h1 className="font-bold px-7 text-gray-800 pb-6">
+          QUAL SERÁ A FORMA DE PAGAMENTO?
+        </h1>
+        <div className="">
+          <TabSlider />
+        </div>
       </div>
     </main>
   );
