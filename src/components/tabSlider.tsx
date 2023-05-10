@@ -7,7 +7,7 @@ function classNames(...classes: any[]) {
 
 export default function TabSlider() {
   return (
-    <div className="w-full max-w-md px-2 ml-5 pb-16 sm:px-0">
+    <div className="w-full max-w-md px-2 pb-8 sm:px-0">
       <Tab.Group>
         <Tab.List className="flex rounded-xl w-full bg-[#fff]">
           <Tab
@@ -27,7 +27,7 @@ export default function TabSlider() {
             className={({ selected }) =>
               classNames(
                 "w-full font-bold text-l rounded-lg leading-5",
-                "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none",
+                "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none h-9",
                 selected
                   ? "bg-blue shadow text-[#FFF]"
                   : "text-blue hover:bg-white/[0.12] hover:text-white"
@@ -40,7 +40,7 @@ export default function TabSlider() {
         <Tab.Panels className="mt-2 w-full">
           <Tab.Panel
             className={classNames(
-              "rounded-xl bg-white p-3",
+              "rounded-xl bg-white pt-3",
               "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2"
             )}
           >
@@ -73,7 +73,7 @@ export default function TabSlider() {
           </Tab.Panel>
           <Tab.Panel
             className={classNames(
-              "rounded-xl bg-white p-3",
+              "rounded-xl bg-white pt-3",
               "ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2"
             )}
           >

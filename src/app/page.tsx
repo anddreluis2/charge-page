@@ -3,13 +3,12 @@ import Card from "@/components/card";
 import GroupedRadio from "@/components/groupedRadio";
 import Stepper from "@/components/stepper";
 import TabSlider from "@/components/tabSlider";
-import { RadioGroup, Tab } from "@headlessui/react";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col bg-[#FFF] px-5 py-14">
+    <main className="flex min-h-screen flex-col bg-[#FFF] px-64 py-14">
       <Stepper />
-      <div className="flex pt-7 px-7 justify-around">
+      <div className="flex pt-7 justify-between">
         <div className="flex flex-col">
           <h1 className="font-bold text-gray-800 pb-6">O QUE COBRAR?</h1>
           <div className="rounded-lg w-48 relative">
@@ -35,18 +34,19 @@ export default function Home() {
         </div>
         <Card />
       </div>
-      <div className="pt-7 sm:px-8 lg:px-72 flex flex-col justify-start">
-        <h1 className="font-bold px-6 pb-6">QUAL SERÁ A FORMA DE PAGAMENTO?</h1>
+
+      <div className="pt-7 flex flex-col">
+        <h1 className="font-bold pb-6">QUAL SERÁ A FORMA DE PAGAMENTO?</h1>
         <div className="">
           <TabSlider />
         </div>
-        <div className="px-7">
+        <div className="">
           <h3 className="font-bold pb-5">COMO SEU CLIENTE PODERÁ PAGAR?</h3>
           <GroupedRadio />
         </div>
       </div>
       <footer>
-        <div className="flex justify-end text-[#FFF] font-bold rounded-lg px-10 pt-10">
+        <div className="flex justify-end text-[#FFF] font-bold rounded-lg pt-10">
           <button type="submit" className="bg-blue w-48 h-12 rounded-3xl">
             AVANÇAR
           </button>
