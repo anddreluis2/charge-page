@@ -5,12 +5,15 @@ import { FaCheck } from "react-icons/fa";
 const plans = [
   {
     name: "Boleto bancário",
+    description: "Valor líquido por parcela: R$148,01",
   },
   {
     name: "Pix",
+    description: "Valor líquido por parcela: R$148,01",
   },
   {
     name: "Cartão de Crédito",
+    description: "Valor líquido por parcela: R$150,01",
   },
 ];
 
@@ -43,7 +46,7 @@ export default function GroupedRadio() {
                           <RadioGroup.Label
                             as="p"
                             className={`font-bold  ${
-                              checked ? "text-white" : "text-gray-900"
+                              checked ? "text-white" : "text-gray"
                             }`}
                           >
                             {plan.name}
@@ -51,17 +54,20 @@ export default function GroupedRadio() {
                           <RadioGroup.Description
                             as="span"
                             className={`inline ${
-                              checked ? "text-sky-100" : "text-gray-500"
+                              checked ? "text-blue" : "text-gray"
                             }`}
                           >
-                            <span aria-hidden="true">
-                              Valor líquido por parcela: R$148,01
+                            <span
+                              className="text-xs text-gray"
+                              aria-hidden="true"
+                            >
+                              {plan.description}
                             </span>{" "}
                           </RadioGroup.Description>
                         </div>
                       </div>
                       {checked && (
-                        <div className="shrink-0 text-white">
+                        <div className="shrink-0 text-white text-blue">
                           <FaCheck className="h-6 w-6" />
                         </div>
                       )}
