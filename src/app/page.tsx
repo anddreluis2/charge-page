@@ -1,8 +1,9 @@
 "use client";
 import Card from "@/components/card";
+import GroupedRadio from "@/components/groupedRadio";
 import Stepper from "@/components/stepper";
 import TabSlider from "@/components/tabSlider";
-import { Tab } from "@headlessui/react";
+import { RadioGroup, Tab } from "@headlessui/react";
 
 export default function Home() {
   return (
@@ -34,14 +35,23 @@ export default function Home() {
         </div>
         <Card />
       </div>
-      <div className="pt-7 px-72">
-        <h1 className="font-bold px-7 text-gray-800 pb-6">
-          QUAL SERÁ A FORMA DE PAGAMENTO?
-        </h1>
+      <div className="pt-7 sm:px-8 lg:px-72 flex flex-col justify-start">
+        <h1 className="font-bold px-6 pb-6">QUAL SERÁ A FORMA DE PAGAMENTO?</h1>
         <div className="">
           <TabSlider />
         </div>
+        <div className="px-7">
+          <h3 className="font-bold pb-5">COMO SEU CLIENTE PODERÁ PAGAR?</h3>
+          <GroupedRadio />
+        </div>
       </div>
+      <footer>
+        <div className="flex justify-end text-[#FFF] font-bold rounded-lg px-10 pt-10">
+          <button type="submit" className="bg-blue w-48 h-12 rounded-3xl">
+            AVANÇAR
+          </button>
+        </div>
+      </footer>
     </main>
   );
 }

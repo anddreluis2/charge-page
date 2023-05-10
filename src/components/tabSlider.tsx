@@ -7,7 +7,7 @@ function classNames(...classes: any[]) {
 
 export default function TabSlider() {
   return (
-    <div className="w-full max-w-md px-2 ml-5 py-16 sm:px-0">
+    <div className="w-full max-w-md px-2 ml-5 pb-16 sm:px-0">
       <Tab.Group>
         <Tab.List className="flex rounded-xl w-full bg-[#fff]">
           <Tab
